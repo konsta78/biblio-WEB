@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'biblio/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'biblio/media-queries.css' %}">
+		<title>Онлайн библиотека курса PY-WEB</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="headerContent">
+					<ul class="nav">
+						<li><a href="{% url 'home' %}" class="active">Главная</a></li>
+						<li><a href="#">О сайте</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div class="leftCol">
+					<ul class="leftNav">
+						<li><a href="{% url 'home' %}">Главная</a></li>
+						<li><a href="{% url 'book_list' %}">Список книг</a></li>
+						<li><a href="#">Удалить книгу</a></li>
+						<li><a href="#">Добавить книгу</a></li>
+					</ul>
+
+				</div>
+
+              {% block content %}
+
+              {% endblock %}
+
+				</div>
+			</div>
+			<div class="footer">
+				<p>&copy; Footer content <a href="#">Link footer</a></p>
+			</div>
+		</div>
+		<script src="{% static 'biblio/css3-mediaqueries.js' %}"></script>
+	</body>
+</html>

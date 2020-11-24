@@ -1,0 +1,15 @@
+{% extends "biblio/base.html" %}
+{% load static %}
+
+{% block content %}
+
+	<div class="main">
+		<h1>Список книг:</h1>
+		<hr>
+		{% for book in book_obj %}
+        <p>"{{ book.name }}", {{ book.author }}, {{ book.genre }}, {{ book.year }} год, {{ book.amount }} шт.</p>
+        {% endfor %}
+
+	</div>
+
+{% endblock %}
